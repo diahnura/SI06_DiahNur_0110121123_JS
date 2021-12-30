@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 4. Image Picker - Diah Nur A </title>
+    <style>
+        body {
+            background-color: rgb(221, 221, 255);
+        }
+        .dropdown {
+            background-color: lavender;
+            width: 100px;
+        }
+        span {
+            color:rgb(20, 22, 22);
+        }
+        #pilihan {
+            padding: 10px;
+            background-color: lavender;
+            color:rgb(20, 22, 22);
+        }
+    </style>
+</head>
+<body>
+    <div class="dropdown">
+        <span>Menu</span>
+        <select id="pilihan" onchange="fungsi()">
+            <option value="gajah">Gajah Sri Lanka</option>
+            <option value="lumbalumba">Lumba Lumba Vaquita</option>
+            <option value="orangutan">Orang Utan</option>
+            <option value="pandamerah">Panda Merah</option>
+            <option value="penyubelimbing">Penyu Belimbing</option>
+        </select>
+        
+        <div id="isigambar"></div>
+    </div>
+
+    <script>
+        function fungsi() {
+            let hewan = document.getElementById("pilihan").value;
+
+            if (hewan == "gajah") {
+                gajah = document.getElementById("isigambar").innerHTML = '<img src="gajahsrilanka.jpg" class="gambar">'
+                window.alert("Ini adalah gambar hewan langka, yaitu Gajah Sri Lanka")
+            }
+
+            if (hewan == "lumbalumba") {
+                gajah = document.getElementById("isigambar").innerHTML = '<img src="lumbalumbavaquita.jpg" class="gambar">'
+                window.alert("Ini adalah gambar hewan langka, yaitu Lumba Lumba Vaquita")
+            }
+
+            if (hewan == "orangutan") {
+                gajah = document.getElementById("isigambar").innerHTML = '<img src="orangutan.jpg" class="gambar">'
+                window.alert("Ini adalah gambar hewan langka, yaitu Orang Utan")
+            }
+
+            if (hewan == "pandamerah") {
+                gajah = document.getElementById("isigambar").innerHTML = '<img src="pandamerah.jpg" class="gambar">'
+                window.alert("Ini adalah gambar hewan langka, yaitu Panda Merah")
+            }
+
+            if (hewan == "penyubelimbing") {
+                gajah = document.getElementById("isigambar").innerHTML = '<img src="penyubelimbing.jpg" class="gambar">'
+                window.alert("Ini adalah gambar hewan langka, yaitu Penyu Belimbing")
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 2. Menghitung Kurs Rupiah - Diah Nur A </title>
+
+    <style>
+        .bingung {
+            background-color: rgb(243, 168, 159);
+            padding: 3%;
+            margin: 10px;
+            width: 25%;
+            text-align: justify;
+            border: 2px solid rgb(153, 74, 66);
+        }
+        .masukannilai {
+            color: rgb(65, 59, 59);
+        }
+        .tombolhasil {
+            background-color: rgb(252, 196, 190);
+            color: rgb(65, 59, 59);
+        }
+        .hasilnya {
+            color: rgb(65, 59, 59);
+        }
+        #hasil {
+            color: rgb(65, 59, 59);
+        }
+        #dollarnya {
+            background-color: rgb(252, 196, 190);
+            color:rgb(65, 59, 59);
+        }
+    </style>
+
+    <script>
+        function hitung() {
+            const rupiah = 14650;
+            let dollar = document.getElementById("dollarnya").value;
+            console.log("Dollar : " + dollar);
+            let kurs = rupiah * dollar;
+            console.log("Kurs Dollar : " + dollar);
+            let hasil = document.getElementById("hasil");
+            hasil.innerHTML = "Rp." + kurs;
+
+        }
+    </script>
+
+</head>
+<body>
+    <h3>Menghitung Kurs Rupiah</h3>
+    <div class="bingung">
+        <p class="masukannilai">Masukan Nilai Dollar : </p>
+        <input type="number" value="" size="15" id="dollarnya">
+        <button onclick="hitung()" size="18" class="tombolhasil"> Hasil </button>
+        <br/>
+        <p class="hasilnya">Hasil : </p> <span id="hasil"></span>
+    </div>
+
+</body>
+</html>

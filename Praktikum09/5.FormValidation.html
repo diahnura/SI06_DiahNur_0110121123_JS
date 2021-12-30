@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 5. Form Validation - Diah Nur A </title>
+    <style>
+        form {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            background-color: lavender;
+            padding: 25px;
+            width: 400px;
+            margin: 20px;
+            color: rgb(37, 34, 34);
+        }
+        div {
+            padding: 5px;
+        }
+        .tombol {
+            background-color: lavender;
+            color:rgb(37, 34, 34);
+        }
+    </style>
+</head>
+<body>
+    <div class="form">
+		<form action="#" method="POST" onSubmit="validasi()">
+			<div>
+				Nama Anda : <input type="text" placeholder="Diah Nur Anjelita" id="nama">
+                <br>
+                <span>Masukan Nama yang Valid!</span>
+                <br/>
+			</div>
+			<div>
+				Email Anda : <input type="email" placeholder="diahnur@gmail.com" id="email">
+                <br>
+                <span>Masukan Email yang Valid!</span>
+                <br/>
+			</div>
+            <div>
+				Jam Keberangkatan : <input type="time" placeholder="16:00" id="jamberangkat">
+                <br>
+                <span>Masukan Jam dengan Benar!</span>
+                <br/>
+			</div>
+            <div>
+				Tujuan Keberangkatan : <input type="text" placeholder="Bogor" id="tujuan">
+                <br>
+                <span>Masukan Tujuan dengan Benar!</span>
+                <br/>
+			</div>
+            <div>
+				Jumlah Tiket : <input type="number" placeholder="1" id="tiket">
+                <br>
+                <span>Masukan Tiket dengan Benar!</span>
+                <br/>
+            </div>
+            <br/>
+            <div>
+                <button onclick="tombol()">Submit</button>
+            </div>
+		</form>
+
+        <div>
+            <p id="1"></p>
+            <p id="2"></p>
+            <p id="3"></p>
+            <p id="4"></p>
+            <p id="5"></p>
+        </div>
+	</div>
+
+    <script>
+
+    let nama = document.getElementById("nama")
+    let email = document.getElementById("email")
+    let jamberangkat = document.getElementById("jamberangkat")
+    let tujuan = document.getElementById("tujuan")
+    let tiket = document.getElementById("tiket")
+    let span = document.getElementsByTagName("span")
+
+    function validasi() {
+        if (nama.value == "" || nama.value.length >= 30 ) {
+            span[0].style.visibility = "visible"
+        }
+        else{
+            document.getElementById("1").innerHTML = "Nama : " + nama.value;
+        }
+
+        if (email.value == "") {
+            span[1].style.visibility = "visible"
+        }
+        else{
+            document.getElementById("2").innerHTML = "Email : " + email.value;
+        }
+
+        if (jamberangkat.value == "" ) {
+            span[2].style.visibility = "visible"
+        }
+        else{
+            document.getElementById("3").innerHTML = "Jam Keberangkatan : " + jamberangkat.value;
+        }
+
+        if (tujuan.value == "") {
+            span[3].style.visibility = "visible"
+        }
+        else{
+            document.getElementById("4").innerHTML = "Tujuan : " + tujuan.value;
+        }
+
+        if (tiket.value == "") {
+            span[4].style.visibility = "visible"
+        }
+        else{
+            document.getElementById("5").innerHTML = "Jumlah Tiket : " + tiket.value;
+        }
+    }
+    </script>
+</body>
+</html>
